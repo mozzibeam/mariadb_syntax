@@ -17,6 +17,10 @@ delete from author where id=3;
 -- select 조건절 활용 조회
 select * from author where id>1 and name='legacy3';
 
+-- select ~ in
+select * from author where id in (1,3,5);
+select * from post where author_id in (select id from author where name='hong');
+
 -- 중복제거 조회 : distinct
 select name from author;
 select distinct name from author;
